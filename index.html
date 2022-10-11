@@ -6,8 +6,8 @@
     </head>
     <body>
         <form id="ferryInput">
-            <input list="departure" id="from" pattern="^(TSA|SWB|HSB|DUK|LNG|NAN|Tsawwassen)$">
-            <datalist type="form" id="departure">
+            <select type="form" id="departure">
+                <label>Default will display all departures and destinations</label>
                 <option value="" selected></option>
                 <option value="TSA">Tsawwassen</option>
                 <option value="SWB">Swartz Bay</option>
@@ -15,15 +15,15 @@
                 <option value="DUK">Duke Point (Nanaimo)</option>
                 <option value="LNG">Langford</option>
                 <option value="NAN">Departure Bay (Nanaimo)</option>
-            </datalist>
-            <input list="destination" id="to" pattern="^(HSB|DUK)">
-            <datalist type="form" id="destination">
+            </select>
+            <select type="form" id="destination">
+                <label>Default will display all destinations</label>
                 <option value="" selected></option>
-                <option value="">HSB</option>
-            </datalist>
-            <button id="button" type="submit">Button</button>
+            </select>
+            <button id="button" type="submit">Submit</button>
         </form>
         
-        <script type="text/javascript" src="/creative2/script.js"></script>
+        
+        <script type="module" src="/creative2/script.js"></script>
     </body>
 </html>
