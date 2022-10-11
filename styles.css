@@ -1,0 +1,9 @@
+.schedule { 
+    text-align: center; 
+}
+
+.departure {
+    display: flex;
+    border: red 1px solid;
+    border-radius: 2px; 
+}
