@@ -4,8 +4,94 @@
     box-sizing: border-box; 
 }
 
+.icon {
+    max-height: 3em; 
+    background-color: white; 
+    border-radius: 2em;
+    padding:.2em; 
+    margin: .1em; /*Change*/
+}
 
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #02334E; /*Change*/
+    color: white; 
+    align-items: center;
+    padding: 5px 10px;
+}
 
+.content {
+    font-family: "Arial", sans-serif; 
+}
+
+li  {
+    padding: .2em 1em .2em 1em; 
+}
+
+h1 {
+    background-color: #0488CF; /*Change*/
+    color: white;/*Change*/
+    padding: .2em;
+}
+
+.inForm {
+    text-align: center; 
+    padding: 10px;
+    position: sticky; 
+    position: -webkit-sticky;
+    background-color: #035581;
+    min-height: initial; 
+    top: 0;
+    color: white;/*Change*/
+    
+}
+
+.center {
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: url("/creative2/images/ferry.jpeg");
+    background-size: cover; 
+    color: black;
+}
+
+select {
+    width: 200px;
+    padding: .2em; 
+    border-radius: 5px;
+}
+
+button {
+    padding: .2em;
+    border-radius: 5px;
+    border: none;
+    margin-left: .5em; 
+}
+
+button:hover {
+    background-color: gray; /*Change*/
+    color: white; /*Change*/
+}
+
+a:link {
+    color: white;
+    text-decoration: none; 
+    font-family: sans-serif; 
+}
+
+a:hover {
+    opacity: .9; 
+}
+
+a:onclick {
+    color: darkgray;
+}
+
+a:visited {
+    color: white; 
+}
 
 .schedule { 
     text-align: center; 
@@ -13,11 +99,11 @@
 
 .departure {
     display: block;
-    border: blue 1px solid;
-    border-radius: 5px; 
+    border-radius: 10px; 
     padding: 10px;
     margin-top: 10px;
     height: max-content;
+    background-color: #E0F0F9; 
 }
 
 
@@ -32,19 +118,47 @@
 }
 
 .dest-container {
-    border: red 1px solid;
     border-radius: 5px;
 }
 
 .destination {
-    border: green 1px solid;
     border-radius: 5px; 
 }
 
+.time {
+    border-bottom: black 1px solid; 
+}
+
+.footer {
+    text-align: center; 
+    background-color: #02334E;
+    color: white;
+}
+
+
+
 @media screen and (min-width: 900px) {
-    .departure {
-        display: grid; 
-        grid-template-columns: 1fr 2fr; 
+    
+    /*.to {*/
+    /*    grid-area: sd; */
+    /*}*/
+    
+    /*.departure > h1:not(.to):first-of-type {*/
+    /*    grid-area: head; */
+    /*}*/
+    
+    /*.departure > h1:not(.to):last-of-type {*/
+    /*    grid-area: head2; */
+    /*}*/
+    
+    .dest-container {
+        grid-column: 1 / -1; 
     }
+    
+    .departure {
+        display: grid;
+        grid-template-columns: 5fr 1fr 5fr; 
+    }
+    
 }
 

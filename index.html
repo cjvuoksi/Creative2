@@ -2,28 +2,37 @@
 
 <html>
     <head>
+        <title>Creative2</title>
         <link rel="stylesheet" href="/creative2/styles.css">
+        <script src="https://kit.fontawesome.com/a76b9070cd.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     </head>
     <body>
-        <form id="ferryInput">
-            <select type="form" id="departure">
-                <option value="" selected></option>
-                <option value="TSA">Tsawwassen</option>
-                <option value="SWB">Swartz Bay</option>
-                <option value="HSB">Horseshoe Bay</option>
-                <option value="DUK">Duke Point (Nanaimo)</option>
-                <option value="LNG">Langford</option>
-                <option value="NAN">Departure Bay (Nanaimo)</option>
-            </select>
-            <label>&#8594;</label>
-            <select type="form" id="destination">
-                <label>Default will display all destinations</label>
-                <option value="" selected></option>
-            </select>
-            <button id="button" type="submit">Submit</button>
-        </form>
-        <div id="schedule">
-            
+        <div class="content">
+            <div class="header">
+                <img src="/creative2/images/ferry-solid.svg" alt="BC" class="icon">
+                <h3>BC Ferries</h3>
+            </div>
+            <form id="ferryInput" class='inForm center'>
+                <select type="form" id="departure">
+                    <option value="" selected></option>
+                    <option value="TSA">Tsawwassen</option>
+                    <option value="SWB">Swartz Bay</option>
+                    <option value="HSB">Horseshoe Bay</option>
+                    <option value="DUK">Duke Point (Nanaimo)</option>
+                    <option value="LNG">Langford</option>
+                    <option value="NAN">Departure Bay (Nanaimo)</option>
+                </select>
+                <label>&#8594;</label>
+                <select type="form" id="destination">
+                    <label>Default will display all destinations</label>
+                    <option value="" selected></option>
+                </select>
+                <button id="button" type="submit">Submit</button>
+            </form>
+            <div id="schedule">
+                
+            </div>
         </div>
         <div class="footer">
             <a href="https://github.com/cjvuoksi/Creative2">GitHub Repo</a>
