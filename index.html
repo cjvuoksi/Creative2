@@ -7,7 +7,6 @@
     <body>
         <form id="ferryInput">
             <select type="form" id="departure">
-                <label>Default will display all departures and destinations</label>
                 <option value="" selected></option>
                 <option value="TSA">Tsawwassen</option>
                 <option value="SWB">Swartz Bay</option>
@@ -16,6 +15,7 @@
                 <option value="LNG">Langford</option>
                 <option value="NAN">Departure Bay (Nanaimo)</option>
             </select>
+            <label>&#8594;</label>
             <select type="form" id="destination">
                 <label>Default will display all destinations</label>
                 <option value="" selected></option>
@@ -25,7 +25,20 @@
         <div id="schedule">
             
         </div>
-        
+        <div class="footer">
+            <a href="https://github.com/cjvuoksi/Creative2">GitHub Repo</a>
+        </div>
+        <script>
+            function toggleDrop(dropID) {
+                let ID = document.getElementById(dropID); 
+                if (ID.classList.contains("visible")) {
+                    ID.classList.remove("visible"); 
+                }
+                else {
+                    ID.classList.add("visible"); 
+                }
+            }
+        </script>
         <script type="module" src="/creative2/script.js"></script>
     </body>
 </html>

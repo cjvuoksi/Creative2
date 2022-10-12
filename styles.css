@@ -1,9 +1,50 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+
+
 .schedule { 
     text-align: center; 
 }
 
 .departure {
-    display: flex;
-    border: red 1px solid;
-    border-radius: 2px; 
+    display: block;
+    border: blue 1px solid;
+    border-radius: 5px; 
+    padding: 10px;
+    margin-top: 10px;
+    height: max-content;
 }
+
+
+.dropdown {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 1s ease-in-out;
+}
+
+.visible {
+    max-height: 1000px; 
+}
+
+.dest-container {
+    border: red 1px solid;
+    border-radius: 5px;
+}
+
+.destination {
+    border: green 1px solid;
+    border-radius: 5px; 
+}
+
+@media screen and (min-width: 900px) {
+    .departure {
+        display: grid; 
+        grid-template-columns: 1fr 2fr; 
+    }
+}
+
