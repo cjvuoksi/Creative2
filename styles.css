@@ -108,13 +108,17 @@ a:visited {
 
 
 .dropdown {
-    max-height: 0; 
+    max-height: 0px; 
     overflow: hidden; 
-    transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease 0s;
+    border-bottom: solid 1px #4284A7; 
+    border-left: solid 1px #4284A7; 
+    border-right: solid 1px #4284A7;
+    background-color: white; 
 }
 
 .visible {
-    max-height: 1000px; 
+    max-height: 200px; 
 }
 
 .dest-container {
@@ -123,10 +127,25 @@ a:visited {
 
 .destination {
     border-radius: 5px; 
+    margin-bottom: 3px;
+    overflow: hidden; 
 }
 
 .time {
-    border-bottom: black 1px solid; 
+    background-color: #4284A7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    padding-left: 1em; 
+    padding-top: .1em;
+    padding-bottom: .1em;
+}
+.time:hover {
+    background-color: #5A93B2;
+}
+
+ul {
+    
+
 }
 
 .footer {
