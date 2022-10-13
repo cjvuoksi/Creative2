@@ -4,6 +4,11 @@
     box-sizing: border-box; 
 }
 
+.to {
+    padding-left: .5em; 
+    padding-right: .5em; 
+}
+
 .icon {
     max-height: 3em; 
     background-color: white; 
@@ -33,6 +38,7 @@ h1 {
     background-color: #0488CF; /*Change*/
     color: white;/*Change*/
     padding: .2em;
+    font-family: "Open Sans"; 
 }
 
 .inForm {
@@ -43,8 +49,10 @@ h1 {
     background-color: #035581;
     min-height: initial; 
     top: 0;
-    color: white;/*Change*/
-    
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .center {
@@ -61,6 +69,11 @@ select {
     width: 200px;
     padding: .2em; 
     border-radius: 5px;
+    margin-bottom: .2em; 
+}
+
+option[default] {
+    color: darkgray;
 }
 
 button {
@@ -133,6 +146,7 @@ a:visited {
 
 .time {
     background-color: #4284A7;
+    color: #FFF3D6;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; 
     padding-left: 1em; 

@@ -8,6 +8,7 @@ var isResizeCallable = false;
 window.onload = (event) => {
     departure.selectedIndex = 0; 
     destination.selectedIndex = 0; 
+    onResize(); 
 }
 
 document.getElementById("ferryInput").addEventListener('submit', formHandler); 
@@ -17,7 +18,7 @@ departure.addEventListener("change", updateDestinations);
 function updateDestinations(event) {
     event.preventDefault(); 
     let selectedCity = departure.options[departure.selectedIndex].value; 
-    while (destination.childElementCount > 1) {
+    while (destination.childElementCount > 2) {
         destination.removeChild(destination.lastChild); 
     }
     for (let i of destinations[selectedCity]) {
@@ -156,18 +157,16 @@ const fetchInit = {
 window.onresize = onResize; 
 
 function onResize() {
-    if (isResizeCallable) {
-        if (document.getElementById("ferryInput").classList.contains("center")) document.getElementById("ferryInput").classList.remove("center"); 
-        if (window.matchMedia("(min-width: 900px)").matches) {
-            for(let i of document.getElementsByClassName("to")) {
-                i.innerHTML = "<em>&#8594;</em>"; 
-            }
-             
+    if (isResizeCallable) if (document.getElementById("content").classList.contains("center")) document.getElementById("content").classList.remove("center"); 
+    if (window.matchMedia("(min-width: 900px)").matches) {
+        for(let i of document.getElementsByClassName("to")) {
+            i.innerHTML = "<em>&#8594;</em>"; 
         }
-        else {
-            for(let i of document.getElementsByClassName("to")) {
-                i.innerHTML = "to";
-            }
+         
+    }
+    else {
+        for(let i of document.getElementsByClassName("to")) {
+            i.innerHTML = " to ";
         }
     }
 }; 
