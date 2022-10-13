@@ -20,14 +20,15 @@
 .header {
     display: flex; 
     justify-content: space-between; 
-    background-color: #02334E; /*Change*/
+    background-color: #02334E; 
     color: white; 
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 10px; 
+    font-family: "Brush Script MT", cursive; 
 }
 
 .content {
-    font-family: "Arial", sans-serif; 
+    font-family: "Montserrat","Arial", sans-serif; 
 }
 
 li  {
@@ -35,11 +36,16 @@ li  {
 }
 
 h1 {
-    background-color: #0488CF; /*Change*/
+    background-color: #02334E; /*Change*/
     color: white;/*Change*/
     padding: .2em;
-    font-family: "Open Sans"; 
+    text-align: center; 
 }
+
+h2 {
+    padding: .2em;
+}
+
 
 .inForm {
     text-align: center; 
@@ -53,6 +59,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .center {
@@ -70,21 +77,19 @@ select {
     padding: .2em; 
     border-radius: 5px;
     margin-bottom: .2em; 
-}
-
-option[default] {
-    color: darkgray;
+    font-family: "Montserrat", sans-serif; 
 }
 
 button {
     padding: .2em;
     border-radius: 5px;
     border: none;
-    margin-left: .5em; 
+    margin: .5em; 
+    font-family: "Montserrat", sans-serif; 
 }
 
 button:hover {
-    background-color: gray; /*Change*/
+    background-color: #4284A7; /*Change*/
     color: white; /*Change*/
 }
 
@@ -112,11 +117,10 @@ a:visited {
 
 .departure {
     display: block;
-    border-radius: 10px; 
     padding: 10px;
     margin-top: 10px;
     height: max-content;
-    background-color: #E0F0F9; 
+    border-bottom: double #02334E; 
 }
 
 
@@ -124,11 +128,13 @@ a:visited {
     max-height: 0px; 
     overflow: hidden; 
     transition: max-height 1s ease 0s;
-    border-bottom: solid 1px #4284A7; 
-    border-left: solid 1px #4284A7; 
-    border-right: solid 1px #4284A7;
+    border: solid 1px #4284A7; 
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    
     background-color: white; 
 }
+
 
 .visible {
     max-height: 200px; 
@@ -136,6 +142,7 @@ a:visited {
 
 .dest-container {
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .destination {
@@ -145,8 +152,9 @@ a:visited {
 }
 
 .time {
-    background-color: #4284A7;
-    color: #FFF3D6;
+    /*background-color: #4284A7;*/
+    border-color: #4284A7;
+    color: #2E2E2E;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; 
     padding-left: 1em; 
@@ -154,7 +162,10 @@ a:visited {
     padding-bottom: .1em;
 }
 .time:hover {
-    background-color: #5A93B2;
+    /*background-color: #5A93B2;*/
+    border-color: #5A93B2;
+    color: gray;
+    cursor: pointer; 
 }
 
 ul {
@@ -166,6 +177,7 @@ ul {
     text-align: center; 
     background-color: #02334E;
     color: white;
+    padding: .5em; 
 }
 
 
@@ -184,8 +196,13 @@ ul {
     /*    grid-area: head2; */
     /*}*/
     
+
     .dest-container {
         grid-column: 1 / -1; 
+        max-width: 50%; 
+        min-width: 25%; 
+        justify-self: center; 
+        text-align: center; 
     }
     
     .departure {
